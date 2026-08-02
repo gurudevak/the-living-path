@@ -17,10 +17,16 @@ conventions apply in every session, on every machine, without anyone having to r
 - One file does almost everything: `index.html` (~1840 lines) — a single embedded `<style>`
   block and a single embedded `<script>` block, vanilla JavaScript.
 - **No build step, no dependencies, no package manager.** What is in the repo is what is served.
-- Images (`logo.png`, `favicon.png`, `cross.jpeg`, `guru-deva.jpg`, `harnal-portrait.jpg`,
-  `northendfarm.jpeg`, `atthesea.jpeg`, `eventkymodule.jpg`, `yoga-enthusiasm.jpg`) and one video
-  (`movie.mp4`) sit beside `index.html` in the repo root.
-- Source copy also lives in the repo as `The_Living_Path_Final_Version.md` / `.docx`.
+- Images and one video (`movie.mp4`) sit beside `index.html` in the repo root. Referenced by the
+  page: `logo.png`, `favicon.png`, `guru-deva.jpg`, `harnal-portrait.jpg`, `northendfarm.jpeg`,
+  `eventkymodule.jpg`, `yoga-enthusiasm.jpg`.
+- `cross.jpeg` and `atthesea.jpeg` are **not referenced anywhere in `index.html`**. They are kept in
+  the repo but unused — don't assume they are live assets, and check with the repo owner before
+  deleting them.
+- Some decorative backgrounds are **hot-linked from Unsplash and Pexels** rather than stored here.
+  They are outside our control; if one disappears, a section loses its background image.
+- Source copy also lives in the repo as `The_Living_Path_Final_Version.md` / `.docx`. These are
+  reference documents only — nothing builds from them, and the live page has moved ahead of them.
 
 ## Local preview
 
@@ -43,7 +49,17 @@ Breakpoints actually used in `index.html`:
 - `600px` — mobile-specific overrides, spread across several separate blocks.
 
 See `.claude/handover-mobile-review.md` for a full mobile review checklist and a list of known
-tight spots (pricing table at very narrow widths, the element image grid, the hero meta box).
+tight spots (pricing table at very narrow widths, the element image grid, the hero meta box). That
+checklist is **still outstanding** — it has not been worked through.
+
+## Claude Code settings
+
+- `.claude/settings.json` — shared settings, committed, applies to everyone.
+- `.claude/settings.local.json` — per-machine, **not** committed.
+- `.claude/launch.json` — the `site` preview server.
+
+Keep machine-specific absolute paths out of committed files. A path like `/Users/someone/projects/...`
+is wrong the moment the repo is cloned somewhere else, and it has already caused confusion here.
 
 ## Working rules
 

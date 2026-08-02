@@ -1,7 +1,9 @@
 # Handover: Full Mobile Review for The Living Path
 
 ## Project
-- **Location:** `/Users/jel/projects/advanced_training/`
+- **Repo:** `git@github.com:jellebelletje/the-living-path.git` — the repo is the source of truth,
+  not any one folder on any one machine.
+- **This clone:** `/Users/gurudeva/Projects/the-living-path/`
 - **Live URL:** https://jellebelletje.github.io/the-living-path/
 - **Single file site:** `index.html` (all CSS embedded, vanilla JS)
 - **Preview server:** `python3 -m http.server 8080` (configured in `.claude/launch.json` as "site")
@@ -19,6 +21,12 @@ A full mobile review pass was completed at 375x812 (iPhone) viewport. The follow
 8. **Header spacing** — Added `margin-bottom: 20px` on `.site-header` for spacing from hero.
 
 ## What to review next session
+
+> **Status: still outstanding.** The eight fixes listed above were applied and are live. The
+> checklist below was written at the same time and has never been worked through — none of these
+> boxes have been verified since. Treat every unticked line as genuinely unchecked, not as a
+> formality.
+
 Do a thorough mobile review of the **live deployed site** (not just local preview). Check:
 
 ### Visual check at 375x812 (iPhone SE/13 mini)
@@ -46,8 +54,16 @@ Do a thorough mobile review of the **live deployed site** (not just local previe
 - [ ] Teacher portraits side by side or stacked appropriately
 
 ### Key CSS breakpoints
-- `900px` — main responsive breakpoint (grids collapse, stacking begins)
-- `600px` — mobile-specific overrides (3 separate `@media (max-width: 600px)` blocks at lines ~512, ~541, ~969)
+- `900px` — main responsive breakpoint (grids collapse, stacking begins). Two blocks: a
+  `min-width: 900px` at line ~838 and a `max-width: 900px` at line ~935.
+- `600px` — mobile-specific overrides, spread across **four** separate `@media (max-width: 600px)`
+  blocks at lines ~512, ~546, ~974 and ~1203.
+
+Line numbers drift every time `index.html` is edited. Re-check them rather than trusting them:
+
+```
+grep -n "@media" index.html
+```
 
 ### Known areas to watch
 - The pricing table has tight spacing on very narrow screens (320px) — may need testing
@@ -55,11 +71,43 @@ Do a thorough mobile review of the **live deployed site** (not just local previe
 - Element grid: Fire is alone in its row (3 top, 2 bottom becomes 2-2-1 pattern on mobile) — verify it looks intentional
 - Text paragraphs should have adequate padding from screen edges (currently using `90vw` width via `.section-shell`)
 
-### Calendly links (for reference)
-- Full payment: `https://calendly.com/thelightofthesouluk/the-living-path-module-1-full-payment`
-- Instalments: `https://calendly.com/thelightofthesouluk/the-living-path-module-1-instalments`
+### Booking links (for reference)
+
+These are the links `index.html` actually uses. An earlier version of this file listed them under a
+`thelightofthesouluk` Calendly account; that is **out of date** — the live account is
+`harnal-kundaliniawakening`, confirmed with the site owner.
+
+| Purpose | Link | Where in `index.html` |
+|---|---|---|
+| Register / full payment | `https://calendly.com/harnal-kundaliniawakening/the-living-path-early-bird-price-clone` | lines ~1478, ~1584, ~1643, ~1715 |
+| Instalments | `https://calendly.com/harnal-kundaliniawakening/new-meeting` | lines ~1644, ~1716 |
+| Discovery call | `https://calendly.com/harnal-kundaliniawakening/enquiry-about-course` | line ~1253 |
+| Module 2 waiting list | `https://forms.gle/fvr1vTEMULb9NHD27` | lines ~1440, ~1604 |
+
+> ⚠️ **Worth checking with Har Nal:** the instalments link ends in `new-meeting`, which looks like a
+> Calendly event that was created and never renamed. Every other link has a descriptive slug. If it
+> points at the wrong booking type, people choosing instalments end up in the wrong place. Not
+> changed here — flagging only.
+
+To re-find these after any edit:
+
+```
+grep -n "calendly.com\|forms.gle" index.html
+```
 
 ## Git state
-- Latest commit: `aecfbe9` — "Mobile fixes: pricing grid overflow, logo centering & sizing, hero border radius"
-- All changes committed and pushed to `origin/main`
-- GitHub Pages should auto-deploy within a few minutes
+
+Don't pin a commit hash in this file — it goes stale the moment anything merges, which is exactly
+how the rest of this document drifted. Check the current state directly:
+
+```
+git log --oneline -5
+git status
+```
+
+What holds regardless of the hash:
+
+- `main` is protected. Changes reach it only through a pull request that the repo owner
+  (`jellebelletje`) reviews and merges. Never merge or self-approve.
+- GitHub Pages serves the root of `main`, so **anything merged is public within about a minute**.
+  There is no staging site.
