@@ -5,12 +5,40 @@ conventions apply in every session, on every machine, without anyone having to r
 
 ## The project
 
-- **Repo:** `git@github.com:jellebelletje/the-living-path.git` (owner: `jellebelletje`)
-- **Live site:** https://jellebelletje.github.io/the-living-path/
+- **Repo:** `git@github.com:gurudevak/the-living-path.git` (owner: `gurudevak`)
+- **Live site:** https://thelightofthesoul.co.uk
 - **Deployment:** GitHub Pages serves the site directly from the root of the `main` branch.
+- **Custom domain:** the `CNAME` file in the repo root contains `thelightofthesoul.co.uk`. That file
+  **is** the custom-domain setting — deleting or renaming it takes the site off the domain. HTTPS is
+  enforced, so `http://` redirects to `https://`. `www` redirects to the bare domain.
 
 > **Anything merged to `main` is published to the public internet within about a minute.**
 > There is no staging environment. Treat `main` as the live site, because it is.
+
+## The domain and email — read before touching DNS
+
+The web hosting and the email for `thelightofthesoul.co.uk` are in **two different places**, and
+that is the single most breakable thing about this setup:
+
+- **Web** is on GitHub Pages (the four `185.199.10x.153` A records on the apex, `www` a CNAME to it).
+- **Email** is still at **Krystal**, who also register the domain and host its DNS
+  (nameservers `ns1.krystal.uk` / `ns2.krystal.uk`).
+
+**Never** change the nameservers, **never** cancel the Krystal hosting (the mailboxes go with it),
+and **never** edit the MX records, the SPF or DKIM TXT records, or the `mail` and `ftp` A records.
+`mail.thelightofthesoul.co.uk` is deliberately an A record, not a CNAME — as a CNAME it would follow
+the apex to GitHub and silently break every configured mail client.
+
+Krystal's DNS is edited in **cPanel** (Hosting > My Services > the package > Zone Editor), *not* the
+"Manage DNS" option in the krystal.io client area — that is a different product, and creating a zone
+there could strand the MX records. If you cannot see the MX records, you are in the wrong editor.
+
+The zone TTL is 14400 (4 hours), so a local resolver can serve stale answers for a while. Check
+against the authoritative nameserver to bypass caches:
+
+```
+dig +short A thelightofthesoul.co.uk @ns1.krystal.uk
+```
 
 ## Structure
 
@@ -63,11 +91,15 @@ is wrong the moment the repo is cloned somewhere else, and it has already caused
 
 ## Working rules
 
-`main` is a **protected branch**. It requires a pull request with one approving review, blocks force
-pushes, blocks deletion, and requires review conversations to be resolved before merging.
+`main` is a **protected branch**, but the protection is weaker than it used to be. As checked on
+29 August 2026 it blocks force pushes and deletion and requires review conversations to be resolved.
+It does **not** require a pull request, it does **not** require an approving review, and it does
+**not** restrict who may push.
 
-A direct push to `main` from an account with Write access **will be rejected by the server**. That is
-working as intended. Do not work around it, and do not ask for the protection to be loosened.
+**So a direct push to `main` now succeeds, and publishes to the live site within about a minute.**
+An earlier version of this file said the server would reject it. That is no longer true, and the
+mistake it invites is a public one. GitHub will not catch an error here any more — the cycle below
+is a discipline we keep on purpose, not a rule that is enforced for us. Follow it anyway.
 
 ### The cycle for every change, without exception
 
@@ -85,8 +117,9 @@ working as intended. Do not work around it, and do not ask for the protection to
 5. **Push the branch and open a pull request against `main`,** with a description covering what
    changed, why, and how it was verified. Say so explicitly if anything is visually risky or if a
    decision was uncertain.
-6. **Stop there.** The repo owner reviews and merges. Do not merge. Do not try to approve the pull
-   request — GitHub does not allow approving your own, and attempting it only produces confusing errors.
+6. **Stop there.** The repo owner (`gurudevak`) reviews and merges. Do not merge. Do not try to
+   approve the pull request — GitHub does not allow approving your own, and attempting it only
+   produces confusing errors.
 7. **After it is merged,** return to `main`, pull, and delete the local branch before starting the next
    task.
 
