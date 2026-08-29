@@ -1,10 +1,9 @@
 # Handover: Full Mobile Review for The Living Path
 
 ## Project
-- **Repo:** `git@github.com:jellebelletje/the-living-path.git` — the repo is the source of truth,
+- **Repo:** `git@github.com:gurudevak/the-living-path.git` — the repo is the source of truth,
   not any one folder on any one machine.
-- **This clone:** `/Users/gurudeva/Projects/the-living-path/`
-- **Live URL:** https://jellebelletje.github.io/the-living-path/
+- **Live URL:** https://thelightofthesoul.co.uk
 - **Single file site:** `index.html` (all CSS embedded, vanilla JS)
 - **Preview server:** `python3 -m http.server 8080` (configured in `.claude/launch.json` as "site")
 
@@ -107,7 +106,8 @@ git status
 
 What holds regardless of the hash:
 
-- `main` is protected. Changes reach it only through a pull request that the repo owner
-  (`jellebelletje`) reviews and merges. Never merge or self-approve.
+- `main` is protected, but it no longer requires a pull request — a direct push would succeed and
+  publish. Route changes through a pull request that the repo owner (`gurudevak`) reviews and
+  merges anyway. Never merge or self-approve.
 - GitHub Pages serves the root of `main`, so **anything merged is public within about a minute**.
   There is no staging site.
