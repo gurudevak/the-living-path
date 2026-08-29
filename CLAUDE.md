@@ -116,10 +116,23 @@ is a discipline we keep on purpose, not a rule that is enforced for us. Follow i
    to understand what happened.
 5. **Push the branch and open a pull request against `main`,** with a description covering what
    changed, why, and how it was verified. Say so explicitly if anything is visually risky or if a
-   decision was uncertain.
-6. **Stop there.** The repo owner (`gurudevak`) reviews and merges. Do not merge. Do not try to
-   approve the pull request — GitHub does not allow approving your own, and attempting it only
-   produces confusing errors.
+   decision was uncertain. **Open the pull request as a matter of course — do not ask first.**
+6. **Verify, then merge it yourself.** The repo owner has explicitly asked that pull requests be
+   opened and merged without waiting for her approval, using your own judgement (confirmed
+   29 August 2026). She is not a programmer and does not want to be the one clicking merge.
+
+   Because there is no staging environment, **your verification is the only safety net** — it
+   replaces the review that used to happen here. So merging is conditional on having actually
+   checked the change in the local preview, at desktop **and** at ~375px, with no console errors.
+   Verify first, merge second. Never merge something you have not looked at.
+
+   Do not try to *approve* your own pull request — GitHub does not allow it and the errors are
+   confusing. Merge it directly (`gh pr merge <n> --merge --delete-branch`).
+
+   **Still pause and ask** when the change is genuinely irreversible, when it touches DNS, the
+   `CNAME`, or anything in the domain and email section above, or when a design decision is a real
+   coin-flip. Using judgement means occasionally judging that something needs her eyes — that is
+   not the same as asking permission for routine work.
 7. **After it is merged,** return to `main`, pull, and delete the local branch before starting the next
    task.
 
@@ -127,9 +140,31 @@ is a discipline we keep on purpose, not a rule that is enforced for us. Follow i
 
 - **Never** `git push --force` anywhere in this repo.
 - **Never** commit `.DS_Store` (it is in `.gitignore` — keep it that way).
-- **Never** merge or self-approve a pull request.
+- **Never** try to formally *approve* your own pull request. Merging your own is expected here (see
+  step 6); approving it is a different action and GitHub refuses it.
+- **Never** merge a change you have not verified in the local preview at both widths.
 - **Never guess at a merge conflict in `index.html`.** Explain the situation in plain terms and check
   with the repo owner before resolving.
+
+## When the owner drops new files into the folder
+
+New files that have just been dragged in are **untracked** — git has no record of them. Anything
+that tidies the working tree can sweep them away, and an automatic pre-switch `git stash` did
+exactly that on 29 August 2026 with three photographs. From where she was sitting they had simply
+vanished from the folder, which was alarming.
+
+So: **when new images or assets appear, commit them onto a branch straight away**, before doing
+anything else with them. Committing is what makes them safe.
+
+If files ever do go missing, they are almost certainly not lost — check in this order:
+
+```
+git stash list                 # then: git show --stat 'stash@{0}^3'   (untracked files live in ^3)
+git fsck --lost-found --dangling
+```
+
+Note that switching branches does **not** delete untracked files on its own — the sweep does. Say
+so plainly rather than letting her think a branch switch destroyed her work.
 
 ## Commit identity
 
