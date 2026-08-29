@@ -601,6 +601,28 @@
             box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
         }
 
+        .trio-photos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .trio-photo {
+            margin: 0;
+            height: 260px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(17,17,17,0.08);
+        }
+
+        .trio-photo img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .quote-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -982,6 +1004,16 @@
             .testimonials {
                 padding-left: 24px;
                 padding-right: 24px;
+            }
+
+            /* Three across is unreadable on a phone - roughly 80px per photo. */
+            .trio-photos {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .trio-photo {
+                height: 220px;
             }
 
             .hero {
@@ -1516,16 +1548,16 @@
         <p class="eyebrow">Who This Training Is For</p>
         <h2 class="section-title">For practitioners who sense they have gifts to discover and offer</h2>
         <p class="lede" style="max-width: 800px;">This training is designed for practitioners who sense they have gifts to discover and offer. When you serve your own consciousness, you serve the whole. This is about finding deep satisfaction in the work - not through searching for the next thing, but through stepping into what's already yours.</p>
-        <div class="trio-photos reveal" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 40px 0;">
-            <div style="border-radius: 16px; overflow: hidden; height: 200px; box-shadow: 0 8px 24px rgba(17,17,17,0.08);">
-                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&q=80" alt="A single candle flame in stillness" style="width:100%; height:100%; object-fit:cover;">
-            </div>
-            <div style="border-radius: 16px; overflow: hidden; height: 200px; box-shadow: 0 8px 24px rgba(17,17,17,0.08);">
-                <img src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?w=500&q=80" alt="Morning light through ancient trees" style="width:100%; height:100%; object-fit:cover;">
-            </div>
-            <div style="border-radius: 16px; overflow: hidden; height: 200px; box-shadow: 0 8px 24px rgba(17,17,17,0.08);">
-                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500&q=80" alt="Still mountain lake at dawn" style="width:100%; height:100%; object-fit:cover;">
-            </div>
+        <div class="trio-photos reveal">
+            <figure class="trio-photo">
+                <img src="morning-practice.jpg" alt="The group practising together on the grass on a misty morning at North End Farm" loading="lazy" style="object-position: center 55%;">
+            </figure>
+            <figure class="trio-photo">
+                <img src="ancient-yew.jpg" alt="Participants gathered at the trunk of an ancient yew tree" loading="lazy" style="object-position: center 62%;">
+            </figure>
+            <figure class="trio-photo">
+                <img src="misty-walk.jpg" alt="Walking out through a misty field together, mats under their arms" loading="lazy" style="object-position: center 45%;">
+            </figure>
         </div>
         <p style="max-width: 800px; margin-top: 20px; margin-bottom: 40px;">You'll benefit most if you:</p>
         <div class="quote-grid">
