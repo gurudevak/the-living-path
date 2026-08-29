@@ -83,6 +83,70 @@
             margin-bottom: 1.5rem;
         }
 
+        .module-list {
+            list-style: none;
+            margin: 40px 0 0;
+            padding: 0;
+        }
+
+        .module-list-row {
+            padding: 24px 0;
+            border-top: 1px solid rgba(17,17,17,0.12);
+        }
+
+        .module-list-row:last-child {
+            border-bottom: 1px solid rgba(17,17,17,0.12);
+        }
+
+        .module-list-head {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 6px 18px;
+        }
+
+        .module-list-no {
+            font-size: 0.75rem;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--accent-gold);
+        }
+
+        .module-list-title {
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            font-size: 1.45rem;
+            color: var(--ink);
+        }
+
+        .module-list-title.is-tbc {
+            opacity: 0.5;
+            font-style: italic;
+        }
+
+        .module-list-when {
+            margin-left: auto;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .module-list-teaser {
+            margin-top: 10px;
+            max-width: 760px;
+        }
+
+        .module-list-teaser a {
+            color: var(--accent-gold);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(203,164,91,0.45);
+            white-space: nowrap;
+        }
+
+        .module-list-teaser a:hover {
+            border-bottom-color: var(--accent-gold);
+        }
+
         .module-status {
             display: inline-block;
             max-width: 800px;
@@ -1030,6 +1094,12 @@
                 gap: 16px;
             }
 
+            /* Let the date drop below the title rather than squeezing beside it. */
+            .module-list-when {
+                margin-left: 0;
+                width: 100%;
+            }
+
             .trio-photo {
                 height: 220px;
             }
@@ -1548,96 +1618,55 @@
         </div>
     </section>
 
-    <section class="section-shell elements" id="curriculum">
-        <p class="eyebrow module-badge">Module One: Your Elemental Magic</p>
-        <h2 class="section-title">The Gift the Five Elements Weave in You</h2>
-        <p class="module-status">This module ran 15-21 June 2026. It runs again when the cycle starts over, after all five modules have been completed - so if you are joining now, you would start with Module Two.</p>
-        <p class="lede" style="max-width: 800px;">We begin where all creation begins: with the elements. Earth, water, fire, air, and ether are the fundamental forces that weave through your body, your consciousness, your work, and the natural world around you.</p>
-        <div style="max-width: 800px; margin-top: 30px; margin-bottom: 40px;">
-            <p>Something in you already knows there is more available. You've given so much to your path — your practice, your people, the work you feel called to do. And through all of that giving, a quieter knowing has been growing: that there is a deeper source waiting to meet you. A place where your energy renews rather than depletes. Where the passion that first drew you to this work isn't just a memory — it's alive, present, and ready to move through you again.</p>
-            <p style="margin-top: 16px;">This module is about coming home to that aliveness. When you reconnect with the elemental forces that are alive in you — not as concepts but as felt, embodied experience — something shifts. Your spirit remembers what it came here to do. The heaviness lifts. A natural vitality returns, not because you've pushed harder, but because you've finally made room for what was always there.</p>
-
-            <h3 class="module-subhead" style="margin-top: 40px;">Liberating the Elements Within You</h3>
-            <p>This is what this first week is really about.</p>
-            <p style="margin-top: 16px;">The elements have been defined, categorized, taught in specific ways. You've learned what earth is supposed to feel like. What fire is meant to do. How water should flow. As if there's only one way to experience them.</p>
-            <p style="margin-top: 16px;">The elements alive in you are waiting to be discovered, not confirmed. Your earth might ground in ways traditional teachings never described. Your fire might burn with a quality that doesn't fit the usual definitions. Your water might move in patterns uniquely yours.</p>
-            <p style="margin-top: 16px;">When you liberate the elements within yourself, you free them from how they're supposed to be.</p>
-            <p style="margin-top: 16px;">These times are calling for new expressions, fresh perspectives, ways of working that haven't been mapped yet. Building and expanding on the old. The elements want to move through you in ways that serve what's emerging. Your unique configuration is not random. It's what's needed.</p>
-            <p style="margin-top: 16px;">Through this deep understanding, you'll bring your way of working from deep within you. You'll discover how to allow new insights to arise naturally from your practice. You'll learn how to contribute to life in ways you may have never imagined possible, but you realise are very natural to you.</p>
-            <p style="margin-top: 16px;">Through specific practices drawn from yogic and energetic traditions, you'll develop a feeling that you sense of how earth grounds, how water flows, how fire transforms, how air moves, and how ether holds space for it all.</p>
-
-            <h3 class="module-subhead" style="margin-top: 40px;">The Power of Kriya</h3>
-            <p>The power of kriya is at the heart of this module. In yogic tradition, kriya means "complete action" or "sequence" - it's the technology of creation itself. This is Kundalini Yoga's core gift - kriya as living technology. Understanding how to work with it at this depth equips you for what these times are calling forth. This will transform how you attract teaching kriyas going forward.</p>
-            <p style="margin-top: 16px;">When you understand kriya as elemental flow, as the alive process within you and within all life, your work shifts. You're facilitating a living process by honouring it. You're working with the same forces that create mountains, move oceans, and birth stars.</p>
-
-            <h3 class="module-subhead" style="margin-top: 40px;">How the Week Unfolds</h3>
-            <p>Each of the five elements receives a full day of dedicated exploration — through yogic practice, meditation, self-inquiry, and time in the land. You'll begin to recognise your own elemental constitution: which two elements are most alive in you, how they shape your gifts, and how they want to express through your work. This isn't abstract theory. It's felt, embodied discovery.</p>
-            <p style="margin-top: 16px;">Woven through the week are visits to sacred sites that relate to the elements — Winterbourne Abbas, Avebury, Glastonbury, and the Jurassic Coast. We'll hold ceremony at each one. The land becomes part of the teaching — each place holding something specific for your process.</p>
-            <div class="element-wheel reveal">
-                <div class="wheel-container">
-                    <div class="wheel-ring"></div>
-                    <div class="wheel-ring-motion"></div>
-                    <div class="wheel-node wheel-pos-top">
-                        <div class="wheel-node-icon ether">&#x2728;</div>
-                        <span class="wheel-node-label">Ether</span>
-                    </div>
-                    <div class="wheel-node wheel-pos-right">
-                        <div class="wheel-node-icon fire">&#x1F525;</div>
-                        <span class="wheel-node-label">Fire</span>
-                    </div>
-                    <div class="wheel-node wheel-pos-bottom-right">
-                        <div class="wheel-node-icon earth">&#x1F33F;</div>
-                        <span class="wheel-node-label">Earth</span>
-                    </div>
-                    <div class="wheel-node wheel-pos-bottom-left">
-                        <div class="wheel-node-icon water">&#x1F30A;</div>
-                        <span class="wheel-node-label">Water</span>
-                    </div>
-                    <div class="wheel-node wheel-pos-left">
-                        <div class="wheel-node-icon air">&#x1F343;</div>
-                        <span class="wheel-node-label">Air</span>
-                    </div>
-                    <div class="wheel-centre">
-                        <span class="wheel-centre-text">Your elemental<br>constitution</span>
-                    </div>
-                    <div class="wheel-site wheel-site-tl"><span class="site-icon">&#x26ED;</span>Winterbourne Abbas</div>
-                    <div class="wheel-site wheel-site-tr"><span class="site-icon">&#x1F5FF;</span>Avebury</div>
-                    <div class="wheel-site wheel-site-bl"><span class="site-icon">&#x26F0;&#xFE0F;</span>Glastonbury</div>
-                    <div class="wheel-site wheel-site-br"><span class="site-icon">&#x1F30A;</span>Jurassic Coast</div>
+    <section class="section-shell" id="modules">
+        <p class="eyebrow">The Five Modules</p>
+        <h2 class="section-title">The whole path, module by module</h2>
+        <p class="lede" style="max-width: 800px;">Five modules, roughly 4-6 months apart. Two are named so far - the rest are announced well in advance so you can plan around them.</p>
+        <ul class="module-list">
+            <li class="module-list-row">
+                <div class="module-list-head">
+                    <span class="module-list-no">Module One</span>
+                    <span class="module-list-title">Your Elemental Magic</span>
+                    <span class="module-list-when">Ran 15-21 June 2026</span>
                 </div>
-            </div>
-
-            <p style="margin-top: 16px;">By the end of the week, you'll have a felt sense of your own elemental constitution — which two elements are strongest in you, how they shape your gifts, and how to work with them consciously. You'll stop trying to be the kind of healer or teacher you think you should be, and start trusting the one you actually are. That alone changes everything: how you hold space, how you teach, how you live. The exhaustion that comes from working against your own nature begins to fall away, replaced by something far more sustainable — the energy that flows when you're finally aligned with what's truly yours.</p>
-
-            <h3 class="module-subhead" style="margin-top: 40px;">Questions You'll Explore</h3>
-            <p>What is your unique way of connecting with the elemental forces? How do you receive their wisdom? How do they speak through your body, through your voice, through your work? What happens when you consciously weave with the elements?</p>
-            <p style="margin-top: 20px; font-style: italic; color: var(--accent-gold);">The elements are calling. They want to work through you in your own unique way.</p>
-        </div>
-        <div class="element-row reveal">
-            <div class="element-item">
-                <div class="element-img" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80');"></div>
-                <span class="element-name">Earth</span>
-            </div>
-            <div class="element-item">
-                <div class="element-img" style="background-image:url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=400&q=80');"></div>
-                <span class="element-name">Water</span>
-            </div>
-            <div class="element-item">
-                <div class="element-img" style="background-image:url('https://images.unsplash.com/photo-1468245856972-a0333f3f8293?w=400&q=80');"></div>
-                <span class="element-name">Fire</span>
-            </div>
-        </div>
-        <div class="element-row-bottom reveal">
-            <div class="element-item">
-                <div class="element-img" style="background-image:url('https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=400&q=80');"></div>
-                <span class="element-name">Air</span>
-            </div>
-            <div class="element-item">
-                <div class="element-img" style="background-image:url('https://images.unsplash.com/photo-1503435824048-a799a3a84bf7?w=400&q=80');"></div>
-                <span class="element-name">Ether</span>
-            </div>
+                <p class="module-list-teaser">Earth, water, fire, air and ether as felt, embodied forces rather than ideas - and how they move through you in a way that is yours alone. <a href="#curriculum">Read the full outline</a></p>
+            </li>
+            <li class="module-list-row is-next">
+                <div class="module-list-head">
+                    <span class="module-list-no">Module Two</span>
+                    <span class="module-list-title">A Deep Work with the Mind</span>
+                    <span class="module-list-when">2-8 November 2026</span>
+                </div>
+                <p class="module-list-teaser">The next module, and the one you can book now. Full details are being finalised and will be published shortly. <a href="#module-two">See the dates</a></p>
+            </li>
+            <li class="module-list-row">
+                <div class="module-list-head">
+                    <span class="module-list-no">Module Three</span>
+                    <span class="module-list-title is-tbc">To be announced</span>
+                    <span class="module-list-when">Dates to come</span>
+                </div>
+            </li>
+            <li class="module-list-row">
+                <div class="module-list-head">
+                    <span class="module-list-no">Module Four</span>
+                    <span class="module-list-title is-tbc">To be announced</span>
+                    <span class="module-list-when">Dates to come</span>
+                </div>
+            </li>
+            <li class="module-list-row">
+                <div class="module-list-head">
+                    <span class="module-list-no">Module Five</span>
+                    <span class="module-list-title is-tbc">To be announced</span>
+                    <span class="module-list-when">Dates to come</span>
+                </div>
+            </li>
+        </ul>
+        <div class="section-cta" style="margin-top: 36px;">
+            <a href="https://forms.gle/fvr1vTEMULb9NHD27" target="_blank" rel="noopener noreferrer" class="btn btn-outline magnetic">Join the Module 2 Waiting List</a>
         </div>
     </section>
+
+
 
     <section class="section-shell pricing" id="pricing">
         <p class="eyebrow">Investment &amp; Logistics</p>
@@ -1670,20 +1699,7 @@
                     <li>Personal expenses</li>
                 </ul>
             </article>
-            <article class="pricing-card reveal">
-                <h3>Module Schedule 2027</h3>
-                <ul>
-                    <li>Module Two (A Deep Work with the Mind) will run 2-8 November 2026</li>
-                    <li>Module Three &mdash; dates to be announced</li>
-                    <li>Module Four &mdash; dates to be announced</li>
-                    <li>Module Five &mdash; dates to be announced</li>
-                    <li>Modules are scheduled approximately 4-6 months apart, with exact dates announced well in advance to allow for planning</li>
-                </ul>
-                <div style="margin-top: 16px;">
-                    <a href="https://forms.gle/fvr1vTEMULb9NHD27" target="_blank" rel="noopener noreferrer" class="btn btn-outline magnetic">Join the Module 2 Waiting List</a>
-                </div>
-            </article>
-            <article class="pricing-card featured reveal" style="grid-column: span 2;">
+            <article class="pricing-card featured reveal" style="grid-column: 1 / -1;">
                 <h3>Pricing per Module</h3>
                 <table class="room-pricing-table">
                     <thead>
@@ -1778,6 +1794,97 @@
                     </ul>
                     <p>We reserve the right to cancel the retreat, in which case all monies paid will be refunded in full.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-shell elements" id="curriculum">
+        <p class="eyebrow module-badge">Module One: Your Elemental Magic</p>
+        <h2 class="section-title">The Gift the Five Elements Weave in You</h2>
+        <p class="module-status">This module ran 15-21 June 2026. It runs again when the cycle starts over, after all five modules have been completed - so if you are joining now, you would start with Module Two.</p>
+        <p class="lede" style="max-width: 800px;">We begin where all creation begins: with the elements. Earth, water, fire, air, and ether are the fundamental forces that weave through your body, your consciousness, your work, and the natural world around you.</p>
+        <div style="max-width: 800px; margin-top: 30px; margin-bottom: 40px;">
+            <p>Something in you already knows there is more available. You've given so much to your path — your practice, your people, the work you feel called to do. And through all of that giving, a quieter knowing has been growing: that there is a deeper source waiting to meet you. A place where your energy renews rather than depletes. Where the passion that first drew you to this work isn't just a memory — it's alive, present, and ready to move through you again.</p>
+            <p style="margin-top: 16px;">This module is about coming home to that aliveness. When you reconnect with the elemental forces that are alive in you — not as concepts but as felt, embodied experience — something shifts. Your spirit remembers what it came here to do. The heaviness lifts. A natural vitality returns, not because you've pushed harder, but because you've finally made room for what was always there.</p>
+
+            <h3 class="module-subhead" style="margin-top: 40px;">Liberating the Elements Within You</h3>
+            <p>This is what this first week is really about.</p>
+            <p style="margin-top: 16px;">The elements have been defined, categorized, taught in specific ways. You've learned what earth is supposed to feel like. What fire is meant to do. How water should flow. As if there's only one way to experience them.</p>
+            <p style="margin-top: 16px;">The elements alive in you are waiting to be discovered, not confirmed. Your earth might ground in ways traditional teachings never described. Your fire might burn with a quality that doesn't fit the usual definitions. Your water might move in patterns uniquely yours.</p>
+            <p style="margin-top: 16px;">When you liberate the elements within yourself, you free them from how they're supposed to be.</p>
+            <p style="margin-top: 16px;">These times are calling for new expressions, fresh perspectives, ways of working that haven't been mapped yet. Building and expanding on the old. The elements want to move through you in ways that serve what's emerging. Your unique configuration is not random. It's what's needed.</p>
+            <p style="margin-top: 16px;">Through this deep understanding, you'll bring your way of working from deep within you. You'll discover how to allow new insights to arise naturally from your practice. You'll learn how to contribute to life in ways you may have never imagined possible, but you realise are very natural to you.</p>
+            <p style="margin-top: 16px;">Through specific practices drawn from yogic and energetic traditions, you'll develop a feeling that you sense of how earth grounds, how water flows, how fire transforms, how air moves, and how ether holds space for it all.</p>
+
+            <h3 class="module-subhead" style="margin-top: 40px;">The Power of Kriya</h3>
+            <p>The power of kriya is at the heart of this module. In yogic tradition, kriya means "complete action" or "sequence" - it's the technology of creation itself. This is Kundalini Yoga's core gift - kriya as living technology. Understanding how to work with it at this depth equips you for what these times are calling forth. This will transform how you attract teaching kriyas going forward.</p>
+            <p style="margin-top: 16px;">When you understand kriya as elemental flow, as the alive process within you and within all life, your work shifts. You're facilitating a living process by honouring it. You're working with the same forces that create mountains, move oceans, and birth stars.</p>
+
+            <h3 class="module-subhead" style="margin-top: 40px;">How the Week Unfolds</h3>
+            <p>Each of the five elements receives a full day of dedicated exploration — through yogic practice, meditation, self-inquiry, and time in the land. You'll begin to recognise your own elemental constitution: which two elements are most alive in you, how they shape your gifts, and how they want to express through your work. This isn't abstract theory. It's felt, embodied discovery.</p>
+            <p style="margin-top: 16px;">Woven through the week are visits to sacred sites that relate to the elements — Winterbourne Abbas, Avebury, Glastonbury, and the Jurassic Coast. We'll hold ceremony at each one. The land becomes part of the teaching — each place holding something specific for your process.</p>
+            <div class="element-wheel reveal">
+                <div class="wheel-container">
+                    <div class="wheel-ring"></div>
+                    <div class="wheel-ring-motion"></div>
+                    <div class="wheel-node wheel-pos-top">
+                        <div class="wheel-node-icon ether">&#x2728;</div>
+                        <span class="wheel-node-label">Ether</span>
+                    </div>
+                    <div class="wheel-node wheel-pos-right">
+                        <div class="wheel-node-icon fire">&#x1F525;</div>
+                        <span class="wheel-node-label">Fire</span>
+                    </div>
+                    <div class="wheel-node wheel-pos-bottom-right">
+                        <div class="wheel-node-icon earth">&#x1F33F;</div>
+                        <span class="wheel-node-label">Earth</span>
+                    </div>
+                    <div class="wheel-node wheel-pos-bottom-left">
+                        <div class="wheel-node-icon water">&#x1F30A;</div>
+                        <span class="wheel-node-label">Water</span>
+                    </div>
+                    <div class="wheel-node wheel-pos-left">
+                        <div class="wheel-node-icon air">&#x1F343;</div>
+                        <span class="wheel-node-label">Air</span>
+                    </div>
+                    <div class="wheel-centre">
+                        <span class="wheel-centre-text">Your elemental<br>constitution</span>
+                    </div>
+                    <div class="wheel-site wheel-site-tl"><span class="site-icon">&#x26ED;</span>Winterbourne Abbas</div>
+                    <div class="wheel-site wheel-site-tr"><span class="site-icon">&#x1F5FF;</span>Avebury</div>
+                    <div class="wheel-site wheel-site-bl"><span class="site-icon">&#x26F0;&#xFE0F;</span>Glastonbury</div>
+                    <div class="wheel-site wheel-site-br"><span class="site-icon">&#x1F30A;</span>Jurassic Coast</div>
+                </div>
+            </div>
+
+            <p style="margin-top: 16px;">By the end of the week, you'll have a felt sense of your own elemental constitution — which two elements are strongest in you, how they shape your gifts, and how to work with them consciously. You'll stop trying to be the kind of healer or teacher you think you should be, and start trusting the one you actually are. That alone changes everything: how you hold space, how you teach, how you live. The exhaustion that comes from working against your own nature begins to fall away, replaced by something far more sustainable — the energy that flows when you're finally aligned with what's truly yours.</p>
+
+            <h3 class="module-subhead" style="margin-top: 40px;">Questions You'll Explore</h3>
+            <p>What is your unique way of connecting with the elemental forces? How do you receive their wisdom? How do they speak through your body, through your voice, through your work? What happens when you consciously weave with the elements?</p>
+            <p style="margin-top: 20px; font-style: italic; color: var(--accent-gold);">The elements are calling. They want to work through you in your own unique way.</p>
+        </div>
+        <div class="element-row reveal">
+            <div class="element-item">
+                <div class="element-img" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80');"></div>
+                <span class="element-name">Earth</span>
+            </div>
+            <div class="element-item">
+                <div class="element-img" style="background-image:url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=400&q=80');"></div>
+                <span class="element-name">Water</span>
+            </div>
+            <div class="element-item">
+                <div class="element-img" style="background-image:url('https://images.unsplash.com/photo-1468245856972-a0333f3f8293?w=400&q=80');"></div>
+                <span class="element-name">Fire</span>
+            </div>
+        </div>
+        <div class="element-row-bottom reveal">
+            <div class="element-item">
+                <div class="element-img" style="background-image:url('https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=400&q=80');"></div>
+                <span class="element-name">Air</span>
+            </div>
+            <div class="element-item">
+                <div class="element-img" style="background-image:url('https://images.unsplash.com/photo-1503435824048-a799a3a84bf7?w=400&q=80');"></div>
+                <span class="element-name">Ether</span>
             </div>
         </div>
     </section>
