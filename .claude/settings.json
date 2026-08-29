@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl:*)",
+      "Bash(open:*)",
+      "Bash(du:*)",
+      "Bash(git remote get-url origin)",
+      "mcp__Claude_Preview__preview_start",
+      "mcp__Claude_Browser__preview_start"
+    ]
+  }
+}
