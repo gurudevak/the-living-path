@@ -83,6 +83,22 @@
             margin-bottom: 1.5rem;
         }
 
+        .module-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 44px;
+        }
+
+        .module-gallery figure {
+            margin: 0;
+            height: 280px;
+            border-radius: 18px;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 10px 30px rgba(17,17,17,0.10);
+        }
+
         .module-list {
             list-style: none;
             margin: 40px 0 0;
@@ -1094,6 +1110,15 @@
                 gap: 16px;
             }
 
+            .module-gallery {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .module-gallery figure {
+                height: 220px;
+            }
+
             /* Let the date drop below the title rather than squeezing beside it. */
             .module-list-when {
                 margin-left: 0;
@@ -1413,21 +1438,13 @@
                  ============================================================ -->
             <p style="max-width: 800px; margin-top: 20px;">Full details of what this module explores are being finalised and will be published here shortly. To be told the moment they are, join the waiting list below.</p>
         </div>
+        <div class="module-gallery reveal" aria-hidden="true">
+            <figure style="background-image:url('https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=800&q=80');"></figure>
+            <figure style="background-image:url('https://images.pexels.com/photos/6019780/pexels-photo-6019780.jpeg?auto=compress&cs=tinysrgb&w=800');"></figure>
+        </div>
         <div class="section-cta reveal">
             <a href="https://forms.gle/fvr1vTEMULb9NHD27" target="_blank" rel="noopener noreferrer" class="btn btn-primary magnetic">Join the Module 2 Waiting List</a>
             <a href="#pricing" class="btn btn-outline magnetic">View Pricing</a>
-        </div>
-    </section>
-
-    <section class="section-shell split intro" id="about">
-        <div class="text reveal">
-            <p class="eyebrow">The Invitation</p>
-            <h2 class="section-title">The Gift Only You Carry</h2>
-            <p class="lede">Maybe it happens in certain sessions - an aliveness you can't explain or recapture. Maybe a practice you've done forever suddenly shows you something completely new. These moments are pointing you somewhere, showing you there's more.</p>
-        </div>
-        <div class="gallery-stack reveal" aria-hidden="true">
-            <figure style="background-image:url('https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=800&q=80');"></figure>
-            <figure style="background-image:url('https://images.pexels.com/photos/6019780/pexels-photo-6019780.jpeg?auto=compress&cs=tinysrgb&w=800');"></figure>
         </div>
     </section>
 
