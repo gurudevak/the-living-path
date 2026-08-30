@@ -118,6 +118,29 @@
             object-fit: cover;
         }
 
+        .module-split {
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            gap: 48px;
+            align-items: center;
+            margin-top: 56px;
+        }
+
+        .module-split-figure {
+            margin: 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 12px 34px rgba(17,17,17,0.12);
+            align-self: center;
+        }
+
+        .module-split-figure img {
+            display: block;
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+        }
+
         .module-gallery {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -1154,6 +1177,22 @@
                 height: 220px;
             }
 
+            /* Stack, and keep the picture under its own words in both blocks. */
+            .module-split {
+                grid-template-columns: 1fr;
+                gap: 22px;
+                margin-top: 40px;
+            }
+
+            .module-split.reverse .module-split-text {
+                order: -1;
+            }
+
+            .module-split-figure img {
+                min-height: 240px;
+                height: 240px;
+            }
+
             .section-figure img {
                 height: 240px;
             }
@@ -1505,21 +1544,31 @@
             <p>The Yoga Sutras of Patanjali &mdash; the Royal Path of Meditation &mdash; define yoga as the stilling of the fluctuations of the mind.</p>
             <p style="margin-top: 16px;">We work through Patanjali&rsquo;s eight limbs &mdash; yama (ethics), niyama (observances), asana (posture), pranayama (breath), pratyahara (senses inward), dharana (concentration), dhyana (sustained attention), samadhi (absorption). The last four are the inner ones, the ones that work on the mind directly.</p>
             <p style="margin-top: 16px;">We&rsquo;ll use mindfulness, Kundalini Yoga kriyas, concentration practices, inquiry, and open awareness and specific meditations to balance, calm, open and direct our minds as portals into higher consciousness.</p>
-
-            <h3 class="module-subhead" style="margin-top: 40px;">The Day on the Heart</h3>
-            <p>One whole day goes to the heart, because it&rsquo;s the way in &mdash; to consciousness, and to the higher mind.</p>
-            <p style="margin-top: 16px;">Patanjali says so directly. Sutra III.34: concentration on the heart brings knowledge of consciousness. And in the chakra map the heart is the middle of things, three centres below it and three above, where the everyday and the vast meet.</p>
-            <p style="margin-top: 16px;">That day is about self-love. About holding all of yourself, including the parts you keep out of view.</p>
-            <p style="margin-top: 16px;">It&rsquo;s also where the befriending becomes possible, because you can&rsquo;t befriend anything you&rsquo;re still judging. We&rsquo;ll use meditations that wake up a compassionate heart, and we&rsquo;ll take the steps needed to drop into that place and hold everything you carry, in coherency, in oneness.</p>
-
-            <h3 class="module-subhead" style="margin-top: 40px;">Time for profound Contemplation</h3>
-            <p>Where does your attention go when you stop steering it? Which of your beliefs are actually yours? What do you do when something can&rsquo;t be fixed &mdash; and what do you do when something can&rsquo;t be got back? What have you been waiting to improve about yourself before you&rsquo;d let yourself be at peace with it? And what is your mind adding, right now, to what&rsquo;s really here?</p>
         </div>
 
-        <div class="module-gallery reveal" aria-hidden="true">
-            <figure style="background-image:url('https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=800&q=80');"></figure>
-            <figure style="background-image:url('https://images.pexels.com/photos/6019780/pexels-photo-6019780.jpeg?auto=compress&cs=tinysrgb&w=800');"></figure>
+        <div class="module-split reveal">
+            <div class="module-split-text">
+                <h3 class="module-subhead">The Day on the Heart</h3>
+                <p>One whole day goes to the heart, because it&rsquo;s the way in &mdash; to consciousness, and to the higher mind.</p>
+                <p style="margin-top: 16px;">Patanjali says so directly. Sutra III.34: concentration on the heart brings knowledge of consciousness. And in the chakra map the heart is the middle of things, three centres below it and three above, where the everyday and the vast meet.</p>
+                <p style="margin-top: 16px;">That day is about self-love. About holding all of yourself, including the parts you keep out of view.</p>
+                <p style="margin-top: 16px;">It&rsquo;s also where the befriending becomes possible, because you can&rsquo;t befriend anything you&rsquo;re still judging. We&rsquo;ll use meditations that wake up a compassionate heart, and we&rsquo;ll take the steps needed to drop into that place and hold everything you carry, in coherency, in oneness.</p>
+            </div>
+            <figure class="module-split-figure">
+                <img src="https://images.pexels.com/photos/6019780/pexels-photo-6019780.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="A woman resting her hand on her heart" loading="lazy">
+            </figure>
         </div>
+
+        <div class="module-split reverse reveal">
+            <figure class="module-split-figure">
+                <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=800&amp;q=80" alt="Sitting alone in stillness beside a lake" loading="lazy">
+            </figure>
+            <div class="module-split-text">
+                <h3 class="module-subhead">Time for profound Contemplation</h3>
+                <p>Where does your attention go when you stop steering it? Which of your beliefs are actually yours? What do you do when something can&rsquo;t be fixed &mdash; and what do you do when something can&rsquo;t be got back? What have you been waiting to improve about yourself before you&rsquo;d let yourself be at peace with it? And what is your mind adding, right now, to what&rsquo;s really here?</p>
+            </div>
+        </div>
+
         <div class="section-cta reveal">
             <a href="https://forms.gle/fvr1vTEMULb9NHD27" target="_blank" rel="noopener noreferrer" class="btn btn-primary magnetic">Join the Module 2 Waiting List</a>
             <a href="#pricing" class="btn btn-outline magnetic">View Pricing</a>
