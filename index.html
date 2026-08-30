@@ -545,6 +545,13 @@
             box-shadow: 0 30px 80px rgba(17,17,17,0.08);
         }
 
+        /* The Inner Alchemy and Cycles of Depth sit flush otherwise, so their
+           rounded corners meet and the two cards read as one long box. */
+        .pillars + .pillars {
+            margin-top: 64px;
+        }
+
+
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -1205,6 +1212,10 @@
                 font-size: 1.3rem;
                 padding: 18px 20px;
                 margin-top: 26px;
+            }
+
+            .pillars + .pillars {
+                margin-top: 40px;
             }
 
             .module-split-figure img {
